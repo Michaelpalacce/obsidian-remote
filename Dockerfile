@@ -1,8 +1,8 @@
 FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbullseye
 
-LABEL maintainer="github@sytone.com" \
-      org.opencontainers.image.authors="github@sytone.com" \
-      org.opencontainers.image.source="https://github.com/sytone/obsidian-remote" \
+LABEL maintainer="sgenov94@gmail.com" \
+      org.opencontainers.image.authors="sgenov94@gmail.com" \
+      org.opencontainers.image.source="https://github.com/Michaelpalacce/obsidian-remote" \
       org.opencontainers.image.title="Container hosted Obsidian MD" \
       org.opencontainers.image.description="Hosted Obsidian instance allowing access via web browser"
 
@@ -13,7 +13,7 @@ RUN echo "**** install packages ****" && \
     apt-get autoclean && rm -rf /var/lib/apt/lists/* /var/tmp/* /tmp/*
 
 # Set version label
-ARG OBSIDIAN_VERSION=1.4.16
+ARG OBSIDIAN_VERSION=1.5.8
 
 # Download and install Obsidian
 RUN echo "**** download obsidian ****" && \
